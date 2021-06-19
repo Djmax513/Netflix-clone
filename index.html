@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="./src/node_modules/less/dist/less.min.js"></script>
+    <link rel="stylesheet" href="compile/style.css" />
+
+    <link rel="icon" href="./src/media/netflix.svg">
+    <title>Netflix</title>
+</head>
+<body>
+
+
+
+<div class="container">
+
+    <!-- welcome menu -->
+    <nav class="nav">
+        <img class="nav__img" src="./src/media/netflix.svg" alt="netflix logo">
+        <p class="nav__title"></p>
+    </nav>
+
+
+    <!-- main card -->
+    <main class="main" data-bind="style: {backgroundImage: imgBanner}">
+        <div class="main_card">
+
+            <h2 class="main_card__title" data-bind="text: title">Title</h2>
+                
+            <div class="main_card__labels" data-bind="foreach: tag">
+                <p data-bind="text: $data">tags</p>
+            </div>
+                
+            <p class="main_card__subtitle" data-bind="text: subtitle">Subtitle</p>
+                
+            <div class="main_card__btn">
+                <button class="btn_watch">&#9658; Assistir</button>
+                <button class="btn_wishlist">&plus; Minha Lista</button>
+            </div>
+
+        </div>
+    </main>
+
+
+    
+    <!-- card carousel -->
+    <div class="carousel">
+        <div>
+            <p class="carousel__title">Adicionados recentemente</p>
+        </div>
+        
+        <div class="carousel__inner" data-bind="foreach: carousel1">
+            <img class="carousel__item" data-bind="attr: {src: img, alt: title}, click: $parent.expand">
+        </div>
+        
+    </div>
+    
+    
+    <div data-bind="visible: vis">
+
+    <!-- card carousel -->
+    <div class="carousel">
+        <div>
+            <p class="carousel__title">Adicionados recentemente</p>
+        </div>
+        
+        <div class="carousel__inner" data-bind="foreach: carousel2">
+            <img class="carousel__item" data-bind="attr: {src: img, alt: title}, click: $parent.expand">
+        </div>
+        
+    </div>
+
+    <!-- card carousel -->
+    <div class="carousel">
+        <div>
+            <p class="carousel__title">Adicionados recentemente</p>
+        </div>
+        
+        <div class="carousel__inner" data-bind="foreach: carousel3">
+            <img class="carousel__item" data-bind="attr: {src: img, alt: title}, click: $parent.expand">
+        </div>
+        
+    </div>
+
+    <!-- card carousel -->
+    <div class="carousel">
+        <div>
+            <p class="carousel__title">Adicionados recentemente</p>
+        </div>
+        
+        <div class="carousel__inner" data-bind="foreach: carousel4">
+            <img class="carousel__item" data-bind="attr: {src: img, alt: title}, click: $parent.expand">
+        </div>
+        
+    </div>
+
+
+    </div>
+    
+    
+    <!-- More btn -->
+    <div class="more">
+        <button class="more__btn" data-bind="click: more">
+            &#43; Mais Séries e Filmes
+        </button>
+    </div>
+
+    
+</div>
+
+<script src="./src/scripts/knockout.js"></script>
+<script src="./src/scripts/index.js"></script>
+
+</body>
+</html>

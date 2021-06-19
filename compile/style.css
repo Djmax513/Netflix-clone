@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+/*  Variables   */
+/*  Variables   */
+/*  Functions   */
+/*  Functions   */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+body {
+  background-color: #e5e5e5;
+}
+.container {
+  padding: 10px 10vw;
+}
+@media only screen and (max-width: 550px) {
+  .container {
+    transition: ease-out 0.7s;
+    padding: 0px 20px;
+  }
+}
+.nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.nav__img {
+  width: 2rem;
+  height: 2rem;
+}
+.nav__title {
+  margin-left: 20px;
+  font: normal 1rem 'poppins';
+}
+.main {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  -webkit-box-shadow: inset 0px -50px 50px -10px #000000;
+  box-shadow: inset 0px -50px 50px -10px #000000;
+  height: 60vh;
+  padding: 20px;
+  margin-bottom: 40px;
+  transition: ease 0.7s;
+}
+.main:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.main_card__title {
+  color: white;
+  font: 400 2em 'poppins';
+  text-shadow: 1px 1px 10px #000000;
+}
+@media only screen and (max-width: 550px) {
+  .main_card__title {
+    font-size: 4vw;
+  }
+}
+.main_card__labels {
+  display: flex;
+  color: white;
+  font: normal 0.8rem 'poppins';
+}
+.main_card__labels p {
+  background-color: #333333;
+  padding: 5px;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 550px) {
+  .main_card__labels p {
+    font-size: 2.5vw;
+  }
+  .main_card__labels p p {
+    padding: 0.8vw;
+  }
+}
+.main_card__subtitle {
+  color: white;
+  font: 300 1rem 'poppins';
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
+  max-width: 75ch;
+  text-shadow: 1px 1px 5px #000000;
+}
+@media only screen and (max-width: 550px) {
+  .main_card__subtitle {
+    font: 300 3vw 'poppins';
+  }
+}
+.main_card__btn {
+  display: flex;
+  justify-content: flex-start;
+}
+.main_card__btn button {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font: normal 1em 'poppins';
+  padding: 5px 30px;
+  height: 100%;
+  color: #e5e5e5;
+  transition: ease 0.5s;
+}
+.main_card__btn button--:hover {
+  background-color: #e5e5e5;
+}
+@media only screen and (max-width: 550px) {
+  .main_card__btn button {
+    font-size: 3vw;
+    padding: 5px;
+  }
+}
+.main_card__btn .btn_watch {
+  background-color: #E50914;
+  margin-right: 10px;
+}
+.main_card__btn .btn_watch:hover {
+  background-color: #e5e5e5;
+  color: #E50914;
+}
+@media only screen and (max-width: 550px) {
+  .main_card__btn .btn_watch {
+    width: 120px;
+  }
+}
+.main_card__btn .btn_wishlist {
+  background-color: #333333;
+}
+.main_card__btn .btn_wishlist:hover {
+  background-color: #e5e5e5;
+  color: #333333;
+}
+@media only screen and (max-width: 550px) {
+  .main_card__btn .btn_wishlist {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .main {
+    height: 35vh;
+    margin-bottom: 20px;
+  }
+}
+.carousel {
+  padding: 2px;
+}
+.carousel ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+.carousel ::-webkit-scrollbar-thumb {
+  background: #474747;
+  border-radius: 10px;
+}
+.carousel ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.carousel__title {
+  font: normal 1.5em 'poppins';
+}
+@media only screen and (max-width: 550px) {
+  .carousel__title {
+    font: normal 4vw 'poppins';
+  }
+}
+.carousel .carousel__inner {
+  display: flex;
+  overflow-y: hidden;
+  height: 16em;
+}
+@media only screen and (max-width: 550px) {
+  .carousel .carousel__inner {
+    height: 65%;
+  }
+}
+.carousel .carousel__inner .carousel__item {
+  margin: 10px 5px;
+  box-sizing: none;
+  width: 8em;
+  height: 14em;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: ease 0.7s;
+  -webkit-box-shadow: inset 0px -50px 50px -10px #000000;
+  box-shadow: inset 0px -50px 50px -10px #000000;
+}
+.carousel .carousel__inner .carousel__item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.carousel .carousel__inner .carousel__item:hover ~ .carousel__item {
+  transform: translateX(5%);
+}
+@media only screen and (max-width: 550px) {
+  .carousel .carousel__inner .carousel__item:hover ~ .carousel__item {
+    transform: translateX(0%);
+  }
+}
+@media only screen and (max-width: 550px) {
+  .carousel .carousel__inner .carousel__item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+@media only screen and (max-width: 550px) {
+  .carousel ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    display: none;
+  }
+  .carousel ::-webkit-scrollbar-thumb {
+    background: #474747;
+    border-radius: 10px;
+  }
+  .carousel ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+.more__btn {
+  display: block;
+  text-align: center;
+  border: none;
+  background-color: #E50914;
+  color: #e5e5e5;
+  font: normal 1.3rem 'poppins';
+  margin: 30px auto;
+  width: 20em;
+  padding: 5px 0px;
+  border-radius: 5px;
+  transition: ease 0.5s;
+}
+.more__btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+@media only screen and (max-width: 550px) {
+  .more__btn {
+    width: 100%;
+    font: normal 4vw 'poppins';
+    padding: 5px 0px;
+    margin: 0;
+  }
+}
